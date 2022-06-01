@@ -1,82 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-        />
-        <link rel="stylesheet" href="./styles.css">
- <title>ADEBISI BLOG</title>
-</head>
-<body>
- <!-- Navbar section -->
- <nav>
-  <div class="nav-center">
-  <div class="nav-header">
-   <h2>DEBISI</h2>
-   <button class="nav-toggle">
-     <i class="fas fa-bars"></i>
-    </button>
-  </div>
-  <!-- links -->
-  <ul class="links">
-   <li><a href="#">HOME</a></li>
-   <li><a href="#">ABOUT</a></li>
-   <li><a href="#">PROJECT</a></li>
-   <li><a href="#">CONTACT</a></li>
-  </ul>
-  </div>
- </nav>
- <!-- End of navbar -->
- <!-- Section content -->
- <section class="section">
-  <!-- Adding image to the page -->
-  <div class="img-container">
-   <img src="./istockphoto-1151169816-612x612.jpg" alt="Decriptive Image">
-  </div>
-  <!-- end of image container -->
-  <!-- Write up container -->
-  <article class="article">
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dolores animi ad cupiditate praesentium assumenda molestias, odio ea harum. Eum maxime porro blanditiis, explicabo alias eligendi inventore? Nobis qui doloremque impedit eveniet! Temporibus dolores et ipsam sequi cum cumque maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab distinctio animi quidem facere! Exercitationem nesciunt ipsam, enim velit non provident mollitia error incidunt, recusandae ea quibusdam, facere fuga temporibus debitis.</p>
-  </article>
-  <!-- End of write up container -->
-  <!-- Creating btn for like, dislike and comment -->
-  <div class="section-btn">
-   <div class="reaction-btn">
-   <button class="like-btn btn">
-    <i class="fas fa-thumbs-up"></i><span id="increase">0</span>
-   </button>
-   <button class="dislike-btn btn">
-    <i class="fas fa-thumbs-down"></i><span id="decrease" >0</span>
-   </button>
-   </div>
-   <div class="comment-btn-container">
-   <button class="comment-btn btn">
-    <p>Comment<span id="comment">(0)</span></p>
-   </button>
-   </div>
-  </div>
- <!-- End of the btn created -->
- <!-- User comment section -->
- <div class="comment-section">
-  <!-- <h4 class="user">Adebisi<span class="date"><i class="fas fa-circle"></i>Mon 30 May, 2022</span></h4> -->
-  <!-- <div class="user-comment"> -->
-  <div class="comment-line">
-  <!-- <p class="user-comment">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos nulla, quis laboriosam at exercitationem vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, omnis commodi earum et neque recusandae autem modi amet cupiditate eaque. </p> -->
-  <!-- </div> -->
-  </div>
- </div>
- <!-- End of comment section -->
- <!-- Form container input -->
- <form action="#" class="form">
-  <textarea name="" id="input" cols="30" rows="10" placeholder="Type your comment here"></textarea>
-  <button class="submit-btn btn" type="submit">Post comment</button>
- </form>
- <!-- End of container input form -->
- </section>
- <script src="./app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>ADEBISI BLOG</title>
+  </head>
+  <body>
+    <!-- Navbar section -->
+    <nav>
+      <div class="nav-center">
+        <div class="nav-header">
+          <h2>DEBISI</h2>
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <!-- links -->
+        <ul class="links">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">PROJECT</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End of navbar -->
+    <!-- Section content -->
+    <section class="section">
+      <!-- Adding image to the page -->
+      <div class="img-container">
+        <img id="postImage" />
+      </div>
+
+      <article class="article" id="postBody"></article>
+
+      <div class="section-btn">
+        <div class="reaction-btn">
+          <button class="like-btn btn">
+            <i class="fas fa-thumbs-up"></i><span id="increase"></span>
+          </button>
+          <button class="dislike-btn btn">
+            <i class="fas fa-thumbs-down"></i><span id="decrease"></span>
+          </button>
+        </div>
+        <div class="comment-btn-container">
+          <button class="comment-btn btn">
+            <p>Comment<span id="comment"></span></p>
+          </button>
+        </div>
+      </div>
+
+      <div class="comment-section">
+        <div class="comment-line"></div>
+      </div>
+
+      <form action="#" class="form">
+        <textarea
+          name=""
+          id="input"
+          cols="30"
+          rows="10"
+          placeholder="Type your comment here"
+        ></textarea>
+        <button class="submit-btn btn" type="submit">Post comment</button>
+      </form>
+      <!-- End of container input form -->
+    </section>
+    <script src="./modules/variables.js"></script>
+    <script src="./modules/RenderPost.js"></script>
+    <script src="./modules/FavouriteController.js"></script>
+    <script src="./main.js"></script>
+  </body>
 </html>
