@@ -1,0 +1,274 @@
+*{
+ padding:0;
+ margin: 0;
+ box-sizing: border-box;
+}
+ul{
+ list-style: none;
+}
+a{
+ text-decoration:none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+}
+nav {
+ background: #fff;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.nav-center{
+ display:flex;
+ align-items: center;
+ justify-content: space-between;
+ padding:1rem;
+ /* max-width:1170px; */
+}
+.nav-header h2{
+ /* height:40px; */
+ color:hsl(205, 78%, 60%);
+ text-align:center;
+}
+.links{
+ height:auto;
+ display:flex;
+ justify-content: center;
+}
+.links a{
+ padding:0;
+ padding-right:1rem;
+ margin: 0 0.5rem;
+ color: hsl(209, 34%, 30%);
+ font-size: 1rem;
+ text-transform: capitalize;
+ letter-spacing: 0.1rem;
+ padding: 0.5rem 1rem;
+ transition: all 0.3s linear;
+}
+.links a:hover{
+ color:hsl(205, 78%, 60%);
+}
+.nav-toggle{
+ display:none;
+}
+/* Making the navbar responsiveness */
+@media screen and (max-width: 800px) {
+  .nav-header{
+   display:flex;
+   align-items: center;
+   justify-content: space-between;
+   padding:1rem;
+   width: 100%;
+  }
+  .nav-toggle{
+   display:block;
+   font-size:1.5rem;
+   transition:all 0.3s linear;
+   border:none;
+   background:transparent;
+   border-color:transparent;
+   cursor:pointer;
+   color:hsl(205, 78%, 60%);
+  } 
+  .nav-toggle:hover{
+   color:hsl(205, 86%, 17%);
+   transform:rotate(90deg);
+  }
+  .links a{
+   font-size:1rem;
+  }
+  .links{
+   height:0;
+   overflow:hidden;
+   transition: all 0.3s linear;
+   display: none;
+  }
+  .show-links{
+   display:flex;
+   height:10rem;
+  }
+}
+/* End of nav responsiveness */
+/* .section{
+ margin:2rem;
+} */
+.section{
+ margin:auto 17rem
+}
+.img-container{
+ margin:1.5rem 0;
+ display:flex;
+ align-items: center;
+ justify-content: center;
+}
+img{
+ width:800px;
+ border-radius: 10px;
+}
+article p{
+ line-height:20px;
+ letter-spacing: .5px;
+ color: hsl(210, 22%, 49%);
+}
+.section-btn{
+ display:flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.comment-btn{
+ justify-content: right;
+}
+button{
+ border:none;
+ border-color:transparent;
+ /* background:hsl(205, 78%, 60%); */
+ background:transparent;
+ border:1px solid hsl(205, 78%, 60%);
+ padding:.5rem .8rem;
+ margin:1rem;
+ margin-left:0;
+ border-radius:5px;
+ cursor:pointer;
+ transition:all 0.3s linear;
+ color:hsl(205, 78%, 60%); 
+}
+
+i{
+ font-size:1.4rem;
+ text-align: center;
+}
+button:hover {
+ color: white;
+ background: hsl(205, 78%, 60%);
+}
+button{
+ color:hsl(205, 78%, 60%);
+}
+button span{
+ padding-left: .4rem;
+ font-size: 1rem;
+}
+button:hover{
+ color:white;
+}
+.comment-btn{
+ background:black;
+ border-color:black;
+ cursor:none;
+ transition:none;
+ border-radius:0;
+}
+.comment-btn p{
+ text-align:center;
+ color:white;
+}
+.comment-btn:hover{
+ background:black;
+}
+.user{
+ margin-top:2rem;
+ font-weight:700;
+ font-size:1.2rem;
+}
+.user span{
+  font-size:.8rem;
+  margin:0 .3rem;
+  color:rgb(148, 146, 146);
+}
+span i{
+  font-size:.5rem;
+  margin-right:.5rem;
+  color:black;
+  text-align: center;
+}
+.user-comment{
+  padding-left: 1rem;
+  line-height: 20px;
+  letter-spacing: .5px;
+  color:grey;
+  margin-top:.7rem;
+  margin-bottom:2rem;
+}
+textarea{
+  width:100%;
+  border:1px solid black;
+  border-radius:7px;
+  padding:2rem;
+  color:grey;
+}
+textarea:hover{
+  border:1px solid hsl(205, 78%, 60%);
+}
+textarea::placeholder{
+  /* padding:1rem; */
+  font-size:1.2rem;
+  color:rgb(144, 140, 140);
+}
+@media screen and (max-width: 800px) {
+  .section {
+      margin:0;
+      width:100%;
+    }
+  .img-container img{
+    width:520px;
+  }
+  
+  .article {
+    margin:0 6.5rem;
+  }
+  .section-btn{
+    margin: 0 6.5rem;
+  }
+  .comment-section{
+    margin: 0 6.5rem;
+  }
+  form{
+    margin:0 6.5rem;
+  }
+ 
+}
+@media screen and (max-width: 420px){
+  .img-container img{
+    width:350px;
+  }
+    .article {
+      margin: 0 1.5rem;
+    }
+  
+    .section-btn {
+      margin: 0 1.5rem;
+    }
+  
+    .comment-section {
+      margin: 0 1.5rem;
+    }
+  
+    form {
+      margin: 0 1.5rem;
+    }
+}
+@media screen and (max-width: 920px) and (min-width:700px){
+  .section {
+      margin: 4rem;
+      /* width: 100%; */
+    }
+  .article {
+      margin: 0;
+    }
+  
+    .section-btn {
+      margin: 0rem;
+    }
+  
+    .comment-section {
+      margin: 0rem;
+    }
+  
+    form {
+      margin: 0rem;
+    }
+}
